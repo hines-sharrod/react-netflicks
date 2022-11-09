@@ -1,6 +1,52 @@
 .banner {
-    height: 450px;
+    height: 500px;
     position: relative;
-    object-fit: contain;
+    background-size: cover;
+    background-position: center center;
     color: white;
+    background-color: #000;
+}
+
+.banner-title {
+    font-weight: 800;
+    font-size: 3.5rem;
+    text-shadow: 1px 1px 6px rgba(0,0,0,.5);
+}
+
+.banner-content {
+    margin-bottom: 2rem;
+    position: absolute;
+    left: 2rem;
+    bottom: 4rem;
+}
+
+.banner-actions {
+    margin-top: .5rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.banner-actions button {
+    cursor: pointer;
+    background-color: rgba(51,51,51, 0.5);
+    color: white;
+    padding: .5rem 2rem;
+    border: none;
+    outline: none;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.banner-actions button:hover {
+    background-color: white;
+    color: #000;
+    transition: all .25s;
+}
+
+.banner-description {
+    margin-top: 1.5rem;
+    font-weight: 700;
+    max-width: 50rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 6px rgba(0,0,0,.5);
 }
