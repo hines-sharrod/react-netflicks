@@ -22,7 +22,7 @@ const Banner = () => {
     <header
       className="banner"
       style={{
-        backgroundImage: `url('https::/image.tmdb.org/t/p/original${bannerMovie?.backdrop_path}')`
+        backgroundImage: `url('https://image.tmdb.org/t/p/original${bannerMovie?.backdrop_path}')`
       }}
     >
       <div className="banner-content">
