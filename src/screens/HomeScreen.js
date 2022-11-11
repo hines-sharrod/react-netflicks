@@ -1,8 +1,8 @@
 import React from "react";
-import "./HomeScreen.css";
-import Nav from "./Nav";
-import Banner from "./Banner";
-import Row from "./ShowRow";
+import "../screens/HomeScreen.css";
+import Nav from "../components/Nav";
+import Banner from "../components/Banner";
+import Row from "../components/ShowRow";
 import requests from "../requests";
 
 const HomeScreen = () => {
