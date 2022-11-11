@@ -144,10 +144,12 @@ span {
 
 button {
   cursor: pointer;
-  padding: 0.5rem 2rem;
   border: none;
   outline: none;
   font-size: 1rem;
+  background-color: #e34628;
+  color: #fff;
+  padding: 0.5rem 1rem;
 }
 
 .app {

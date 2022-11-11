@@ -1,0 +1,50 @@
+#signin-form {
+  background-color: rgba(0, 0, 0, 0.9);
+  z-index: 3;
+  max-width: 50rem;
+  padding: 4rem;
+}
+
+#signin-form-content {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+}
+
+#signin-form-content #signin-header {
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+#signin-form-content input {
+  padding: 0.9rem;
+  border-radius: 5px;
+  border: 0;
+  outline: 0;
+}
+
+#signin-form-content input:last-of-type {
+  margin-bottom: 1rem;
+}
+
+#signin-form-content button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+#signin-form-content p,
+.important-text {
+  font-weight: 700;
+}
+
+#signin-form-content p {
+  color: darkgrey;
+}
+
+.important-text {
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+}

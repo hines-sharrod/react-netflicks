@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./Nav.css";
 
-const Nav = () => {
+const Nav = ({ authenticated, setSignIn }) => {
   const [showBackground, setShowBackground] = useState(false);
 
   const transitionNavBar = () => {
@@ -26,11 +26,17 @@ const Nav = () => {
         src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
         alt="Netflix logo"
       />
-      <img
-        className="nav-avatar"
-        src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-        alt="profile avatar"
-      />
+      {authenticated && (
+        <img
+          className="nav-avatar"
+          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+          alt="profile avatar"
+        />
+      )}
+
+      {!authenticated && (
+        <button onClick={() => setSignIn(true)}>Sign In</button>
+      )}
     </div>
   );
 };

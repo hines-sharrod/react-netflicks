@@ -6,14 +6,17 @@ import LoginScreen from "./screens/LoginScreen";
 import Nav from "./components/Nav";
 
 const App = () => {
-  const [user, setUser] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
+  const [signIn, setSignIn] = useState(false);
 
   return (
     <div className="app">
-      <Nav />
+      <Nav authenticated={authenticated} setSignIn={setSignIn} />
       <Router>
-        {!user && <LoginScreen />}
-        {user && (
+        {!authenticated && (
+          <LoginScreen signIn={signIn} setSignIn={setSignIn} />
+        )}
+        {authenticated && (
           <Routes>
             <Route exact path="/" element={<HomeScreen />} />
           </Routes>
