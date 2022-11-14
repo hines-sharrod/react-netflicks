@@ -30,7 +30,7 @@ const LoginScreen = ({ signIn, setSignIn }) => {
             </div>
           </div>
         )}
-        {signIn && <SignInForm setSignIn={setSignIn} />}
+        {signIn && <SignInForm />}
       </div>
     </>
   );

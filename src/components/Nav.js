@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import "./Nav.css";
 
-const Nav = ({ authenticated, setSignIn }) => {
+const Nav = ({ signIn, setSignIn, authenticated }) => {
   const [showBackground, setShowBackground] = useState(false);
 
   const transitionNavBar = () => {
@@ -21,11 +22,13 @@ const Nav = ({ authenticated, setSignIn }) => {
 
   return (
     <div className={`nav ${showBackground && "nav-dark"}`}>
-      <img
-        className="nav-logo"
-        src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
-        alt="Netflix logo"
-      />
+      <Link to="/" onClick={() => setSignIn(false)}>
+        <img
+          className="nav-logo"
+          src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Logonetflix.png"
+          alt="Netflix logo"
+        />
+      </Link>
       {authenticated && (
         <img
           className="nav-avatar"
@@ -34,9 +37,7 @@ const Nav = ({ authenticated, setSignIn }) => {
         />
       )}
 
-      {!authenticated && (
-        <button onClick={() => setSignIn(true)}>Sign In</button>
-      )}
+      {!signIn && <button onClick={() => setSignIn(true)}>Sign In</button>}
     </div>
   );
 };

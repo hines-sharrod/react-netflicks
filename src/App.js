@@ -11,8 +11,12 @@ const App = () => {
 
   return (
     <div className="app">
-      <Nav authenticated={authenticated} setSignIn={setSignIn} />
       <Router>
+        <Nav
+          authenticated={authenticated}
+          signIn={signIn}
+          setSignIn={setSignIn}
+        />
         {!authenticated && (
           <LoginScreen signIn={signIn} setSignIn={setSignIn} />
         )}
